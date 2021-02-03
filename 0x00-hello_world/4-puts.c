@@ -1,4 +1,4 @@
-0;276;0c#include <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
