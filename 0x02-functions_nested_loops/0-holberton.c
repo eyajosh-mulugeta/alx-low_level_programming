@@ -8,7 +8,7 @@
 
 int main(void)
 {
-char message[] = "Holberton";
+char message[] = "Holberton\0";
 int i;
 int arrayLength = sizeof(message) / sizeof(message[0]);
 
