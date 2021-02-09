@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include "6-abs.c"
 /**
  * print_last_digit - returns the last digit of a number
  * to the caller function.
