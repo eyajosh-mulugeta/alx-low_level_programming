@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+
 /**
  * print_to_98 - prints integer numbers from n to 98.
  * @n: n is an integer number.
@@ -15,7 +16,7 @@ for (i = n; i >= 98; i--)
 printf("%d, ", i);
 }
 
-if (n < 98)
+if (n <= 98)
 {
 for (i = n; i <= 98; i++)
 printf("%d, ", i);
