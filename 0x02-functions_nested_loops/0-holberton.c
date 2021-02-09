@@ -8,13 +8,12 @@
 
 int main(void)
 {
-char message[] = "Holberton\0";
+char message[] = "Holberton\n\0";
 int i;
 int arrayLength = sizeof(message) / sizeof(message[0]);
 
 for (i = 0; i < arrayLength; i++)
 _putchar(message[i]);
-_putchar('\n');
 
 return (0);
 }
