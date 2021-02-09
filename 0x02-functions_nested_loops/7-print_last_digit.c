@@ -15,6 +15,6 @@ if (lastDigit < 0)
 lastdigit *= -1;
 
 _putchar(lastDigit + '0');
-_putchar('\n');
+
 return (lastDigit);
 }
