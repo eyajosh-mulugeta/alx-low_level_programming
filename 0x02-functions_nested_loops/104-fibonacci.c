@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define N 50
+#define N 98
 /**
  * main - prints the first 50 Fibonacci numbers
  *
@@ -13,7 +13,7 @@ unsigned long int d1, d2, d3;
 int count;
 
 printf("%lu, %lu, ", k1, k2);
-for (count = 2; count < 98; count++)
+for (count = 2; count < N; count++)
 {
 if (k1 + k2 > N || r2 > 0 || r1 > 0)
 {
