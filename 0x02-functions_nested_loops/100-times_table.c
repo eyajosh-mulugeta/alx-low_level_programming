@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -8,37 +7,42 @@
  */
 void print_times_table(int n)
 {
-int i;
-int j;
-int product;
+  int y, x, prod;
 
-if (n <= 15 && n >= 0)
-{
-for (i = 0; i <= n; i++)
-{
-_putchar('0');
-for (j = 1; j <= n; j++)
-{
-_putchar(',');
-_putchar(' ');
-product = i * j;
-if (product <= 99)
-_putchar(' ');
-
-if (product <= 9)
-_putchar(' ');
-
-if (product >= 100)
-{
-_putchar((product / 100) + '0');
-_putchar(((product / 10)) % 10 + '0');
-}
-else if (product <= 99 && product >= 10)
-{
-_putchar((product / 10) + '0');
-}
-_putchar((product % 10) + '0');
-}
-}
-}
+  if (n <= 15 && n >= 0)
+    {
+      for (y = 0; y <= n; y++)
+	{
+	  for (x = 0; x <= n; x++)
+	    {
+	      prod = (y * x);
+	      if (x != 0)
+		{
+		  _putchar(',');
+		  _putchar(' ');
+		}
+	      if (prod < 10 && x != 0)
+		{
+		  _putchar(' ');
+		  _putchar(' ');
+		  _putchar((prod % 10) + '0');
+		}
+	      else if (prod >= 10 && prod < 100)
+		{
+		  _putchar(' ');
+		  _putchar((prod / 10) + '0');
+		  _putchar((prod % 10) + '0');
+		}
+	      else if (prod >= 100 && x != 0)
+		{
+		  _putchar((prod / 100) + '0');
+		  _putchar((prod / 10) % 10 + '0');
+		  _putchar((prod % 10) + '0');
+		}
+	      else
+		_putchar((prod % 10) + '0');
+	    }
+	  _putchar('\n');
+	}
+    }
 }
