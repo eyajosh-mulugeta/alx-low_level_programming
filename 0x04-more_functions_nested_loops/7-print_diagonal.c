@@ -15,8 +15,8 @@ if (n > 0)
 {
 for (i = 1; i <= n; i++)
 {
-count = n - i;
-for (j = 0; j < n; j++)
+count = i - 1;
+for (j = 0; j < i; j++)
 {
   if (count >= 1)
 {
@@ -25,11 +25,13 @@ _putchar(' ');
 }
   else
     {
-      _putchar('#');
-}
-_putchar('\\');
-_putchar('\n');
+      _putchar('\\');
 }
 }
-_putchar('\n');
+ if (i != n)
+ _putchar('\n');
+}
+}
+ _putchar('\n');
+
 }
