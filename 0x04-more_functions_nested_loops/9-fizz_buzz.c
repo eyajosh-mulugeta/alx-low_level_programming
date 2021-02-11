@@ -1,5 +1,3 @@
-#include "holberton.h"
-#include "_putchar.c"
 #include <stdio.h>
 /**
  * main - displays numbers 0 to 100 and replaces
