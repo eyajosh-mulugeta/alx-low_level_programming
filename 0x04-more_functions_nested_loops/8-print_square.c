@@ -12,13 +12,15 @@ int j;
 
 if (size > 0)
 {
-for (i = 0; i < size; i++)
+for (i = 1; i <= size; i++)
 {
 for (j = 0; j < size; j++)
 {
 _putchar('#');
 }
- _putchar('\n');
+if (i != size)
+_putchar('\n');
 }
 }
+_putchar('\n');
 }
