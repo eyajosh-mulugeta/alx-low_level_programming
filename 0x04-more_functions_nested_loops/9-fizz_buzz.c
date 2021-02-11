@@ -18,19 +18,24 @@ for (i = 1; i <= 100; i++)
 {
 if ((i % 3 != 0) && (i % 5 != 0))
 {
-printf("%d ", i);
+printf("%d", i);
 }
 else if ((i % 3 == 0) && (i % 5 == 0))
 {
-printf("%s ", message1);
+printf("%s", message1);
 }
 else if (i % 3 == 0)
 {
-printf("%s ", message2);
+printf("%s", message2);
 }
 else if (i % 5 == 0)
 {
-printf("%s ", message3);
+printf("%s", message3);
+}
+
+if (i != 100)
+{
+printf(" ");
 }
 }
 printf("\n");
