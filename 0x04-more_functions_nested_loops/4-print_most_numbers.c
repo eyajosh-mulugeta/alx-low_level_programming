@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include "_putchar.c"
 
 /**
  * print_most_numbers - this function prints numbers 0 to 9 except
