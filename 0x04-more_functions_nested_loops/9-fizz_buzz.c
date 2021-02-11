@@ -33,6 +33,6 @@ else if (i % 5 == 0)
 printf("%s ", message3);
 }
 }
-_putchar('\n');
+printf("\n");
 return (0);
 }
