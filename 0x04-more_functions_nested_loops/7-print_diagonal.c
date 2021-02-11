@@ -18,20 +18,20 @@ for (i = 1; i <= n; i++)
 count = i - 1;
 for (j = 0; j < i; j++)
 {
-  if (count >= 1)
+if (count >= 1)
 {
 _putchar(' ');
- count--;
+count--;
 }
-  else
-    {
-      _putchar('\\');
-}
-}
- if (i != n)
- _putchar('\n');
+else
+{
+_putchar('\\');
 }
 }
- _putchar('\n');
+if (i != n)
+_putchar('\n');
+}
+}
+_putchar('\n');
 
 }
