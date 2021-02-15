@@ -1,0 +1,10 @@
+#include "holberton.h"
+
+/**
+ * print_rev - a function which reverses a string and print on console.
+ * @c: a pointer variable which holds the string.
+ * Return: void.
+ */
+void print_rev(char *c)
+{
+}
