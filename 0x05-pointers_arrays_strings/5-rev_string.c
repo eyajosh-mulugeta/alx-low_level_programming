@@ -3,7 +3,7 @@
 #include "_putchar.c"
 
 /**
- * rev_string - a function which reverses a string and print on console.
+ * rev_string - A function which reverses a string and print on console.
  * @s: a pointer variable which holds the string.
  * Return: void.
  */
