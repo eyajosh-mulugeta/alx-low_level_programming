@@ -11,7 +11,7 @@ int main(void)
 {
 
 int i;
-char pass[12];
+char pass[13];
 
 srand((unsigned int)time(NULL));
 
