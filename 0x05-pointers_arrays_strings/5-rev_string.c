@@ -17,7 +17,7 @@ int i;
 for (i = 0; s[i] != '\0'; i++)
 len++;
 
-for (i = 0, j = len - 1; i < len; i--, j++)
+ for (i = 0, j = len - 1; i < len; i++, j--)
 {
 letter = s[j];
 s[j] = s[i];
