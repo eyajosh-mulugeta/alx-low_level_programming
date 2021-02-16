@@ -21,7 +21,7 @@ init = len / 2;
 if (len % 2 != 0)
 init = len - ((len - 1) / 2);
 
-for (i = init; i <= len; i++)
+for (i = init; i < len; i++)
 _putchar(str[i]);
 _putchar('\n');
 }
