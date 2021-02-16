@@ -19,7 +19,7 @@ len++;
 init = len / 2;
 
 if (len % 2 != 0)
-init = (len - 1) / 2;
+init = (len + 1) / 2;
 
 for (i = init; i <= len; i++)
 _putchar(str[i]);
