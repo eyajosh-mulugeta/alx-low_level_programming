@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <string.h>
+
 
 /**
  * puts_half - is a function that prints the second half of a string to
@@ -9,11 +9,13 @@
  */
 void puts_half(char *str)
 {
-int i;
-int len;
-int init;
 
-len = strlen(str);
+int init;
+int len = 0;
+int i;
+for (i = 0; str[i] != '\0'; i++)
+len++;
+
 init = len / 2;
 
 if (len % 2 != 0)
