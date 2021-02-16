@@ -1,8 +1,7 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
- * strcpy - copies the string from one variable to another.
+ * _strcpy - copies the string from one variable to another.
  * @src: the string pointer variable which holds the addres of
  * the value to be copied.
  * @dest: the string pointer variable address where the copied string
@@ -12,5 +11,14 @@
 
 char *_strcpy(char *dest, char *src)
 {
-return (strcpy(dest, src));
+
+int len = 0;
+int i;
+for (i = 0; src[i] != '\0'; i++)
+len++;
+
+for (i = 0; i < len; i++)
+dest[i] = src[i];
+
+return (dest);
 }
