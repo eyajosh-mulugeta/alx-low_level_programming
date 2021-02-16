@@ -10,26 +10,18 @@
 int main(void)
 {
 
-int i;
-char pass[13];
+int total;
+int count;
+int myrand;
 
-srand((unsigned int)time(NULL));
-
-for (i = 0; i < 4; i++)
+srand(time(NULL));
+for (count = 0, total = 2772; total > 122; count++)
 {
-
-pass[3 * i] = '0' + (rand() % 10);
-char capLetter = 'A' + (rand() % 26);
-
-pass[(3 * i) + 1] = capLetter;
-char letter = 'a' + (rand() % 26);
-
-pass[(3 * i) + 2] = letter;
+myrand = (rand() % 125) + 1;
+printf("%c", myrand);
+total -= myrand;
 }
-pass[3 * i] = '\0';
-printf("Random generated password: %s\n\n", pass);
-
-printf("\n\n");
+printf("%c", total);
 
 return (0);
 }
