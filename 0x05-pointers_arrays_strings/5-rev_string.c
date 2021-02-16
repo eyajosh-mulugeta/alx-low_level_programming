@@ -1,4 +1,3 @@
-#include <string.h>
 #include "holberton.h"
 #include "_putchar.c"
 
@@ -9,11 +8,14 @@
  */
 void rev_string(char *s)
 {
-int i;
+
 int j;
-int len;
 char letter;
-len = (int) strlen(s);
+int len = 0;
+int i;
+
+for (i = 0; s[i] != '\0'; i++)
+len++;
 
 for (i = 0, j = len - 1; i < len; i--, j++)
 {
