@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include "_putchar.c"
-
 
 /**
  * rev_string - A function which reverses a string and print on console.
@@ -35,4 +33,3 @@ str_ptr++;
 end_ptr--;
 }
 }
-
