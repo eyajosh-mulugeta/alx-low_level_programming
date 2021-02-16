@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include "_putchar.c"
+#include <stdio.h>
 
 /**
  * rev_string - A function which reverses a string and print on console.
@@ -17,11 +18,10 @@ int i;
 for (i = 0; s[i] != '\0'; i++)
 len++;
 
- for (i = 0, j = len - 1; i < len; i++, j--)
+for (i = 0, j = len - 1; i < (len / 2); i++, j--)
 {
 letter = s[j];
 s[j] = s[i];
 s[i] = letter;
 }
-_putchar('\n');
 }
