@@ -14,7 +14,7 @@ char *end_ptr;
 char temp;
 
 str_ptr = s;
-end_ptr = s ;
+end_ptr = s;
 
 
 while (s[len])
