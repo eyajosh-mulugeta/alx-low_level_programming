@@ -4,21 +4,22 @@
  *@s: a variable which holds the string value to be converted.
  *Return: string.
  */
-char *rot13(char *s)
+char *rot13(char *c)
 {
-int i;
-i = 0;
-while (s[i] != '\0')
+int i, j;
+char rot_13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm",
+alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+for (i = 0; c[i] != '\0'; i++)
 {
-while ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
-	{
-if ((s[i] >= 'N' && s[i] <= 'Z') || (s[i] >= 'n' && s[i] <= 'z'))
-s[i] -= 13;
-else
-s[i] += 13;
-i++;
+for (j = 0; j < 52; j++)
+{
+if (alphabet[j] == c[i])
+{
+c[i] = rot_13[j];
+break;
 }
-i++;
 }
-return (s);
+}
+return (c);
 }
