@@ -3,39 +3,20 @@
 /**
  * print_number - Prints integer numbers to the console using
  * a custom made _putchar function.
- * @num: holds the integer value to be printed.
+ * @n: holds the integer value to be printed.
  */
-void print_number(int num)
+void print_number(int n)
 {
-unsigned int d = 10, n;
-if (num < 0)
+unsigned int n1;
+n1 = n;
+if (n < 0)
 {
 _putchar('-');
-num *= -1;
+n1 = -n;
 }
-n = num;
-if (n < d)
+if (n1 / 10 != 0)
 {
-_putchar('0' + n);
+print_number(n1 / 10);
 }
-else
-{
-while (n >= d)
-{
-d *= 10;
-if (d >= 1000000000)
-if (d == 1000000000)
-break;
-}
-if (!(d >= 1000000000) || n > 100000000)
-if (!(d == 1000000000) || n == 123456789)
-d /= 10;
-_putchar('0' + n / d);
-while (d != 10)
-{
-d /= 10;
-_putchar('0' + (n / d) % 10);
-}
-_putchar('0' + n % 10);
-}
+_putchar((n1 % 10) + '0');
 }
