@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  *rot13 - encodes a string using rot13.
- *@s: a variable which holds the string value to be converted.
+ *@c: a variable which holds the string value to be converted.
  *Return: string.
  */
 char *rot13(char *c)
