@@ -5,10 +5,10 @@
  * _strcat - a function which concatenates two string values.
  * @dest: a varible which holds the concatenated value.
  * @src: a variable which holds the value to be concatenated.
- * Return:
+ * Return: char.
  */
 
-char *_strcat(char *dest, char *src()
+char *_strcat(char *dest, char *src)
 {
 
 int i, n;
