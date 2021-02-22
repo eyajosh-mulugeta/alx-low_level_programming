@@ -1,0 +1,1 @@
+This repository contains even more pointers, arrays and strings codes written in the C programming language. Continued from the 0x06-pointers_arrays_strings repository.
