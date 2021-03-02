@@ -18,7 +18,7 @@ return (NULL);
 
 char_array = malloc(sizeof(str));
 
-if (char_array == NULL)
+if (sizeof(char_array) < sizeof(str))
 return (NULL);
 
 while (i <= sizeof(str))
