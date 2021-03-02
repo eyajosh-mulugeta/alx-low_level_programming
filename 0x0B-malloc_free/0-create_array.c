@@ -10,13 +10,18 @@
 char *create_array(unsigned int size, char c)
 {
 char *my_array;
-
+unsigned int i = 0;
 if (size == 0)
 return (NULL);
 
 my_array = malloc(size * sizeof(char));
 if (my_array == NULL)
 return (NULL);
-my_array[0] = c;
+
+while (i < size)
+{
+my_array[i] = c;
+i++;
+}
 return (my_array);
 }
