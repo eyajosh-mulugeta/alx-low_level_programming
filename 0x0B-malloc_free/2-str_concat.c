@@ -38,6 +38,6 @@ for (i = 0; i < s2_len; i++)
 str[s1_len] = s2[i];
 s1_len++;
 }
-
+str[total_len] = '\0';
 return (str);
 }
