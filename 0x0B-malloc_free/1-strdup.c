@@ -18,10 +18,15 @@ return (NULL);
 
 char_array = malloc(sizeof(str));
 
+if (char_array == NULL)
+return (NULL);
+else
+{
 while (i <= sizeof(str))
 {
 char_array[i] = str[i];
 i++;
 }
 return (char_array);
+}
 }
