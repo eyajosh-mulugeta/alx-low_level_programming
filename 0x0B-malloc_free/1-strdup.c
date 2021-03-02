@@ -16,13 +16,13 @@ unsigned int i = 0;
 if (str == NULL)
 return (NULL);
 
-char_array = malloc(sizeof(str));
+char_array = malloc((sizeof(str) * sizeof(char)) + 1);
 
 if (char_array == NULL)
 return (NULL);
 else
 {
-while (i <= sizeof(str))
+while (i < (sizeof(str) + 1))
 {
 char_array[i] = str[i];
 i++;
