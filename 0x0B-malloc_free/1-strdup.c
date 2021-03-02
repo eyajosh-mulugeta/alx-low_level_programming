@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * _strdup - returns a pointer to a newly allocated
@@ -11,22 +10,27 @@
 char *_strdup(char *str)
 {
 char *char_array;
-unsigned int i = 0;
+int i = 0;
+int len = 0;
 
 if (str == NULL)
 return (NULL);
 
-char_array = malloc((sizeof(str) * sizeof(char)) + 1);
+while (str[len])
+len++;
+
+char_array = malloc((len + 1) * sizeof(char));
 
 if (char_array == NULL)
 return (NULL);
 else
 {
-while (i < (sizeof(str) + 1))
+while (i < len)
 {
 char_array[i] = str[i];
 i++;
 }
+char_array[len] = '\0';
 return (char_array);
 }
 }
