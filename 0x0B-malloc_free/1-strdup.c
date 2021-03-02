@@ -18,9 +18,6 @@ return (NULL);
 
 char_array = malloc(sizeof(str));
 
-if (sizeof(char_array) < sizeof(str))
-return (NULL);
-
 while (i <= sizeof(str))
 {
 char_array[i] = str[i];
