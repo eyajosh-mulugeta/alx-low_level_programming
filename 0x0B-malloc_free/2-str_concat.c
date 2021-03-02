@@ -15,6 +15,11 @@ int s2_len = 0;
 int total_len = 0;
 int i;
 
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
+
 while (s1[s1_len])
 s1_len++;
 
