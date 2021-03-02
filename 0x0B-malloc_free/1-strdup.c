@@ -17,17 +17,19 @@ while (str[count])
 count++;
 
 char_array = malloc(count *sizeof(char));
+
 if (str == NULL)
 return (NULL);
 
-if (char_array == NULL)
-return (NULL);
-
+if (char_array != NULL)
+{
 while (i < count)
 {
 char_array[i] = str[i];
 i++;
 }
-
 return (char_array);
+}
+
+return (NULL);
 }
