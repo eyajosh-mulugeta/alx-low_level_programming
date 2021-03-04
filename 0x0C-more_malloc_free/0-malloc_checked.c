@@ -12,10 +12,12 @@ int *ptr;
 
 ptr = malloc(b);
 
-if (ptr == NULL)
+if (!ptr)
 {
-return ((int *)98);
+exit(98);
 }
-
+else
+{
 return (ptr);
+}
 }
