@@ -15,22 +15,24 @@ int i;
 int j;
 int total_len;
 
-total_len = (max - min) + 1;
-
-ptr = malloc((total_len + 1) *sizeof(int));
-
-for (i = 0, j = min; j <= max; i++, j++)
-ptr[i] = j;
-
 if (min > max)
 {
 return (NULL);
 }
 
-else if (ptr ==  NULL)
+total_len = (max - min) + 1;
+
+ptr = malloc(total_len *sizeof(int));
+
+if (ptr ==  NULL)
 {
 return (NULL);
 }
+else
+{
+for (i = 0, j = min; j <= max; i++, j++)
+ptr[i] = j;
 
 return (ptr);
+}
 }
