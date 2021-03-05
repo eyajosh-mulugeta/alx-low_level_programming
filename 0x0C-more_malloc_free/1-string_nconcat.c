@@ -35,7 +35,7 @@ total_len = s1_len + s2_len;
 ptr = malloc((total_len + 1) * sizeof(char));
 
 if (ptr == NULL)
-return NULL;
+return (NULL);
 
 for (i = 0; i < s1_len; i++)
 ptr[i] = s1[i];
@@ -44,5 +44,5 @@ for (i = 0, j = s1_len; i < s2_len; i++, j++)
 ptr[j] = s2[i];
 
 ptr[total_len] = '\0';
-return ptr;
+return (ptr);
 }
