@@ -17,8 +17,11 @@ return (NULL);
 ptr = malloc(nmemb * size);
 
 if (ptr == NULL)
+{
 return (NULL);
+}
 else
+{
 return (ptr);
-
+}
 }
