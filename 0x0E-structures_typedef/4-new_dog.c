@@ -1,69 +1,49 @@
 #include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
-
-int _strlen(char *str);
-int _strcpy(char *dest, char *src);
-dog_t *new_dog(char *name, float age, char *owner);
 /**
- *_strlen-finds length of string
- *@str: the string to be mmeasured
- *Return: the length of the string
- */
-
-int _strlen(char *str)
-{
-int len = 0;
-
-while (*str++)
-len++;
-return (len);
-}
-
-/**
- *new_dog- creats a new dog
- *@name: the name of the dog
- *@age:age of the dog
- *@owner: owner of the dog
- *Return: Shappered
+ * new_dog - creates new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ * Return: a dog object
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *shappered;
-int nameLength, ownerLength, i;
+int i, len1, len2;
+dog_t *ndog;
+char *a, *b;
 
-nameLength = _strlen(name);
-ownerLength = _strlen(owner);
-
-if (name == NULL || age < 0 || owner == NULL)
+len1 = 0;
+for (i = 0; name[i] != '\0'; i++)
+len1++;
+len2 = 0;
+for (i = 0; owner[i] != '\0'; i++)
+len2++;
+ndog = malloc(sizeof(dog_t));
+if (ndog == NULL)
 return (NULL);
-
-shappered = malloc(sizeof(dog_t));
-if (shappered == NULL)
-return (NULL);
-
-shappered->name = malloc(sizeof(char) * (_strlen(name) + 1));
-if (shappered->name == NULL)
+a = malloc((len1 + 1) * sizeof(char));
+if (a == NULL)
 {
-free(shappered);
-return (NULL);
-}
-shappered->owner =  malloc(sizeof(char) * (_strlen(owner) + 1));
-if (shappered->owner == NULL)
-{
-free(shappered->name);
-free(shappered);
+free(ndog);
 return (NULL);
 }
-for (i = 0; i < nameLength; i++)
+for (i = 0; i < len1; i++)
+a[i] = name[i];
+a[i] = '\0';
+ndog->name = a;
+ndog->age = age;
+b = malloc((len2 + 1) * sizeof(char));
+if (b == NULL)
 {
-shappered->name[i] = name[i];
+free(a);
+free(ndog);
+return (NULL);
 }
-for (i = 0; i < ownerLength; i++)
-{
-shappered->owner[i] = owner[i];
-}
-shappered->age = age;
-
-
-return (shappered);
+for (i = 0; i < len2; i++)
+b[i] = owner[i];
+b[i] = '\0';
+ndog->owner = b;
+return (ndog);
 }
